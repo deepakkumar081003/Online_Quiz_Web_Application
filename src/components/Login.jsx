@@ -1,5 +1,7 @@
+// Login.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import '../styles/login.css';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -18,12 +20,12 @@ function Login() {
     if (response.ok) {
       const data = await response.json();
       console.log('Login successful:', data);
-      if (data.data.isAdmin==="true"){
-        navigate("/admin")
-      }else{
-        navigate('/home');
+      if (data.data.isAdmin === "true") {
+        navigate("/admin", { state: { username } });
+      } else {
+        navigate('/home', { state: { username } });
       }
-      
+
       // Redirect or update state as needed after successful login
     } else {
       console.error('Login failed:', response.statusText);
@@ -32,20 +34,21 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h1>Welcome to the login page</h1>
-      <label>Username: </label>
+      <label htmlFor="username">Username: </label>
       <input
         id="username"
         type="text"
-        placeholder="username"
+        placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <label>Password: </label>
+      <label htmlFor="password">Password: </label>
       <input
         id="password"
         type="password"
+        placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />

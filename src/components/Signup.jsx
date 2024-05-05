@@ -1,4 +1,6 @@
+// Signup.jsx
 import { useState } from 'react';
+import '../styles/signup.css';
 
 function Signup() {
   const [username, setUsername] = useState('');
@@ -25,27 +27,27 @@ function Signup() {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h1>Welcome to the Signup Page</h1>
-      <label>Username: </label>
+      <label htmlFor="username">Username: </label>
       <input
         id="username"
         type="text"
-        placeholder="username"
+        placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <label>Password: </label>
+      <label htmlFor="password">Password: </label>
       <input
         id="password"
         type="password"
-        placeholder="password"
+        placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleSignup}>Signup</button>
       <a href="/">Login to Account</a>
-      {message && <p>{message}</p>}
+      {message && <p className="signup-message">{message}</p>}
     </div>
   );
 }
