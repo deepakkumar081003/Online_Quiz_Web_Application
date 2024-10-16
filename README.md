@@ -35,7 +35,7 @@ npm run server.js
 
 MongoDB requirements  
 Database: bs  
-Collection: users  
+Collection: authenticate,questions,results  
 
 [
   {
