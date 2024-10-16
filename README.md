@@ -21,13 +21,16 @@ git clone https://github.com/your-username/online-quiz-app.git
   
 Install dependencies:  
 npm install  
-  
-Run the backend server:  
-npm run server  
-  
-Run the frontend React app:  
+
+Make sure you open two terminals for running the server and frontend code  
+Also make sure you are in the correct folder before running the code  
+
+Run the frontend React app (from root folder):  
 npm start  
-  
+
+Run the backend server:  
+npm run server.js  
+    
 Future Enhancements  
 Add more quiz categories and questions.  
 Include a feature for user analytics and quiz feedback.  
