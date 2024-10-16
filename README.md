@@ -32,6 +32,9 @@ Run the backend server:
 npm run server.js  
 
 MongoDB requirements  
+Database: bs  
+Collection: users  
+
 [
   {
     "_id": "66471a2a15f6339ebb164a39",
