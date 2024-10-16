@@ -1,5 +1,7 @@
 # Online_Quiz_Web_Application  
 
+Switch to master branch to see the code  
+
 Description  
 This Online Quiz web application allows users to log in and participate in quizzes, while administrators can log in to manage users and view their scores. The platform is built with a dual-login system for both users and admins.  
   
