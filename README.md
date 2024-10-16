@@ -37,7 +37,7 @@ MongoDB requirements
 Database: quiz  
 Collection: authenticate,questions,results  
   
-Authentication Collection
+authenticate Collection
 This collection stores authentication details for users, including their username, password, and whether they have admin privileges.
 {
   "_id": ObjectId("66483e672f6e7a5d87792d8d"),
@@ -58,7 +58,7 @@ This collection stores authentication details for users, including their usernam
   "isAdmin": false
 }
 
-Questions Collection  
+questions Collection  
 This collection stores quiz questions along with the available options and the correct answer index.  
 {
   "_id": ObjectId("66485e7dfacd3d0d6e52a4eb"),
@@ -79,7 +79,7 @@ This collection stores quiz questions along with the available options and the c
   "answerIndex": 2
 }
 
-Results Collection
+results Collection
 This collection stores the quiz results for different users.  
 {
   "_id": ObjectId("66483e56df12acb87ac48e7b"),
